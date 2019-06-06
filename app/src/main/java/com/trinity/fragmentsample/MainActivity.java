@@ -12,6 +12,12 @@ public class MainActivity extends AppCompatActivity implements
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        // Load the first fragment.
+        getSupportFragmentManager()
+                .beginTransaction()
+                .add(R.id.fragment_container, Fragment1.newInstance())
+                .commit();
     }
 
     /**
@@ -20,7 +26,8 @@ public class MainActivity extends AppCompatActivity implements
     public void onNextButtonClick() {
         getSupportFragmentManager()
                 .beginTransaction()
-                .replace(R.id.fragment_container, Fragment2.newInstance());
+                .replace(R.id.fragment_container, Fragment2.newInstance())
+                .commit();
     }
 
     /**
@@ -29,6 +36,7 @@ public class MainActivity extends AppCompatActivity implements
     public void onPrevButtonClick() {
         getSupportFragmentManager()
                 .beginTransaction()
-                .replace(R.id.fragment_container, Fragment1.newInstance());
+                .replace(R.id.fragment_container, Fragment1.newInstance())
+                .commit();
     }
 }

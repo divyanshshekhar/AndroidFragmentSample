@@ -50,7 +50,7 @@ public class Fragment2 extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View v = inflater.inflate(R.layout.fragment_fragment1, container, false);
+        View v = inflater.inflate(R.layout.fragment_fragment2, container, false);
 
         // Add click event listener to previous button.
         Button prevButton = v.findViewById(R.id.prevButton);
